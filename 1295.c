@@ -1,22 +1,14 @@
 int findNumbers(int *nums, int numsSize)
 {
-    int     num, count, ans;
+    int count = 0;
 
-    num = 0;
-    count = 0;
-    ans = 0;
     for (int i = 0; i < numsSize; i++)
     {
-        num = nums[i];
-        while (num > 0)
-        {
-            num /= 10;
+        int countTmp = 0;
+        for (; nums[i] > 0; nums[i] /= 10)
+            countTmp++;
+        if (countTmp % 2 == 0)
             count++;
-        }
-        if (count % 2 == 0)
-            ans++;
-        count = 0;
-        num = 0;
     }
     return count;
 }
