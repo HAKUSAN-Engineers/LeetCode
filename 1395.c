@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int numTeams(int* rating, int ratingSize)
 {
     int count = 0;
