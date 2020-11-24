@@ -17,4 +17,3 @@ int findLengthOfLCIS(int* nums, int numsSize){
     }
     return ans;
 }
-
